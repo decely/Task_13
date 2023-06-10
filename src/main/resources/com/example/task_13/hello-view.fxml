@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<VBox alignment="CENTER" prefHeight="383.0" prefWidth="412.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task_13.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane fx:id="pane" onMouseClicked="#onPaneClicked" onMousePressed="#onMouseDragStart" onMouseReleased="#onMouseDragEnd" prefHeight="500.0" prefWidth="500.0" />
+   <CheckBox fx:id="checkBox" mnemonicParsing="false" onAction="#onAddModeChange" text="Режим добавления" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Выберите тип диаграммы:" />
+         <ComboBox fx:id="comboBox" onAction="#onSelectComboBox" prefWidth="150.0" />
+      </children>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="386.0">
+      <children>
+         <Label text="Выберите стиль диаграммы:" />
+         <ColorPicker fx:id="colorPicker" onAction="#onColorSelected" prefHeight="33.0" prefWidth="125.0">
+            <value>
+               <Color red="0.23999999463558197" green="1.0" blue="0.47913792729377747" />
+            </value></ColorPicker>
+      </children>
+   </HBox>
+   <CheckBox fx:id="editCheck" mnemonicParsing="false" onAction="#onEditModeChange" text="Режим редактирования" />
+   <Label fx:id="curEditLabel" text="Выбран элемент: " />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Изменить название элемента:" />
+         <TextField fx:id="textField" onAction="#onTextFieldEdit" />
+      </children>
+   </HBox>
+</VBox>
